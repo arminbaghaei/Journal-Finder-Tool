@@ -27,12 +27,8 @@ if st.button("Find Journals") and abstract.strip():
     results = find_matches(abstract, journals)
     st.success("🎯 Top Matching Journals:")
     for idx, row in results.iterrows():
-        st.markdown(f"**{row['Title']}**  
-"
-                    f"📊 *SJR*: {row['SJR']} | 🏅 *Quartile*: {row['SJR Best Quartile']}  
-"
-                    f"📚 *Categories*: {row['Categories']}  
-"
-                    f"🌍 *Country*: {row['Country']} | 🏢 *Publisher*: {row['Publisher']}  
-"
-                    f"---")
+        st.markdown(f"""**{row['Title']}**  
+📊 *SJR*: {row['SJR']} | 🏅 *Quartile*: {row['SJR Best Quartile']}  
+📚 *Categories*: {row['Categories']}  
+🌍 *Country*: {row['Country']} | 🏢 *Publisher*: {row['Publisher']}  
+---""")

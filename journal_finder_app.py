@@ -32,14 +32,26 @@ if st.button("Find Journals") and abstract.strip():
 📚 *Categories*: {row['Categories']}  
 🌍 *Country*: {row['Country']} | 🏢 *Publisher*: {row['Publisher']}  
 ---""")
+# Add download buttons for README and LICENSE
 with open("README.md", "r", encoding="utf-8") as f:
     readme_text = f.read()
 
 with open("LICENSE", "r", encoding="utf-8") as f:
     license_text = f.read()
 
-st.markdown("## 📘 README")
-st.markdown(readme_text)
+st.markdown("## 📄 Downloadable Documents")
 
-st.markdown("## 📜 LICENSE")
-st.markdown(license_text)
+st.download_button(
+    label="📘 Download README",
+    data=readme_text,
+    file_name="README.md",
+    mime="text/markdown"
+)
+
+st.download_button(
+    label="📜 Download LICENSE",
+    data=license_text,
+    file_name="LICENSE",
+    mime="text/plain"
+)
+

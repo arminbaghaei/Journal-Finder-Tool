@@ -32,3 +32,14 @@ if st.button("Find Journals") and abstract.strip():
 📚 *Categories*: {row['Categories']}  
 🌍 *Country*: {row['Country']} | 🏢 *Publisher*: {row['Publisher']}  
 ---""")
+with open("README.md", "r", encoding="utf-8") as f:
+    readme_text = f.read()
+
+with open("LICENSE", "r", encoding="utf-8") as f:
+    license_text = f.read()
+
+st.markdown("## 📘 README")
+st.markdown(readme_text)
+
+st.markdown("## 📜 LICENSE")
+st.markdown(license_text)

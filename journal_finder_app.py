@@ -3,6 +3,14 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+# ✅ Must be the first Streamlit command
+st.set_page_config(page_title="Cover Letter Generator", layout="centered")
+
+# 🔷 Logo and Branding
+st.image("ResearchMate1.png", width=180)
+st.markdown("### Developed by **Abdollah Baghaei Daemei** – [ResearchMate.org](https://www.researchmate.org)")
+st.markdown("---")
+
 st.set_page_config(page_title="Journal Finder", layout="centered")
 st.title("🔎 Journal Finder (SJR 2024)")
 st.write("Paste your abstract below, and we’ll suggest relevant journals from the SJR 2024 database.")

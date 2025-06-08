@@ -49,7 +49,6 @@ with open("README.md", "r", encoding="utf-8") as f:
 with open("LICENSE", "r", encoding="utf-8") as f:
     license_text = f.read()
 
-st.markdown("## 📄 Downloadable Documents")
 st.download_button(
     label="📘 Download README",
     data=readme_text,
